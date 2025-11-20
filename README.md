@@ -4,7 +4,7 @@ CLI утилита для сравнения двух JSON файлов конф
 
 ### Установка
 
-\`\`\`bash
+\`\`bash
 ### Клонируйте репозиторий
 git clone https://github.com/Pibode/frontend-project-46.git
 cd frontend-project-46
@@ -14,13 +14,13 @@ npm install
 
 ### Сделайте пакет доступным глобально
 npm link
-\`\`\`
+\`\`
 
 ### Использование
 
-\`\`\`bash
+\`\`bash
 gendiff [options] <filepath1> <filepath2>
-\`\`\`
+\`\`
 
 ### Опции
 
@@ -31,18 +31,18 @@ gendiff [options] <filepath1> <filepath2>
 ### Примеры
 
 Сравнить два JSON файла:
-\`\`\`bash
+\`\`bash
 gendiff file1.json file2.json
-\`\`\`
+\`\`
 
 Сравнить с указанием формата:
-\`\`\`bash
+\`\``bash
 gendiff -f plain file1.json file2.json
-\`\`\`
+\`\`
 
 ### Пример вывода
 
-\`\`\`bash
+\`\`bash
 {
   - follow: false
     host: hexlet.io
@@ -51,9 +51,11 @@ gendiff -f plain file1.json file2.json
   + timeout: 20
   + verbose: true
 }
-\`\`\`
+\`\`
 
 ### Демонстрация
 
 [![asciicast](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX.svg)](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX)
 
+### Демонстрация работы с YAML
+[![asciicast](https://asciinema.org/a/JbYjopU0n3NXMapKVv0SqjwXb.svg)](https://asciinema.org/a/JbYjopU0n3NXMapKVv0SqjwXb)
