@@ -1,22 +1,22 @@
-# Gendiff - JSON Difference Generator
+### Gendiff - JSON Difference Generator
 
 CLI утилита для сравнения двух JSON файлов конфигурации и отображения различий в удобочитаемом формате.
 
-## Установка
+### Установка
 
 \`\`\`bash
 # Клонируйте репозиторий
 git clone https://github.com/Pibode/frontend-project-46.git
 cd frontend-project-46
 
-# Установите зависимости
+### Установите зависимости
 npm install
 
-# Сделайте пакет доступным глобально
+### Сделайте пакет доступным глобально
 npm link
 \`\`\`
 
-## Использование
+### Использование
 
 \`\`\`bash
 gendiff [options] <filepath1> <filepath2>
@@ -40,7 +40,7 @@ gendiff file1.json file2.json
 gendiff -f plain file1.json file2.json
 \`\`\`
 
-## Пример вывода
+### Пример вывода
 
 \`\`\`bash
 {
@@ -53,11 +53,11 @@ gendiff -f plain file1.json file2.json
 }
 \`\`\`
 
-## Демонстрация
+### Демонстрация
 
-[![asciicast](https://asciinema.org/a/usoKJciiaekfFk2ps1giNSzsv.svg)](https://asciinema.org/a/usoKJciiaekfFk2ps1giNSzsv)
+[![asciicast](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX.svg)](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX)
 
-## Структура проекта
+### Структура проекта
 
 \`\`\`
 frontend-project-46/
