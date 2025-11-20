@@ -5,7 +5,7 @@ CLI утилита для сравнения двух JSON файлов конф
 ### Установка
 
 \`\`\`bash
-# Клонируйте репозиторий
+### Клонируйте репозиторий
 git clone https://github.com/Pibode/frontend-project-46.git
 cd frontend-project-46
 
