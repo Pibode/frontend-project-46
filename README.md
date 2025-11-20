@@ -1,4 +1,4 @@
-### Gendiff - JSON Difference Generator
+## Gendiff - JSON Difference Generator
 
 CLI утилита для сравнения двух JSON файлов конфигурации и отображения различий в удобочитаемом формате.
 
@@ -57,17 +57,3 @@ gendiff -f plain file1.json file2.json
 
 [![asciicast](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX.svg)](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX)
 
-### Структура проекта
-
-\`\`\`
-frontend-project-46/
-├── bin/
-│   └── gendiff.js      # Точка входа CLI
-├── src/
-│   ├── index.js        # Основная логика сравнения
-│   └── parsers.js      # Утилиты для парсинга файлов
-├── file1.json          # Пример файла 1
-├── file2.json          # Пример файла 2
-└── package.json
-\`\`\`
-EOF
