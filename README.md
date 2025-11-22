@@ -1,26 +1,26 @@
-## Gendiff - JSON Difference Generator
+# Gendiff - JSON и YAML Difference Generator
 
-CLI утилита для сравнения двух JSON файлов конфигурации и отображения различий в удобочитаемом формате.
+CLI утилита для сравнения двух JSON или YAML файлов конфигурации и отображения различий в удобочитаемом формате.
 
-### Установка
+## Установка
 
-\`\`bash
-### Клонируйте репозиторий
+\`\`\`bash
+# Клонируйте репозиторий
 git clone https://github.com/Pibode/frontend-project-46.git
 cd frontend-project-46
 
-### Установите зависимости
+# Установите зависимости
 npm install
 
-### Сделайте пакет доступным глобально
+# Сделайте пакет доступным глобально
 npm link
-\`\`
+\`\`\`
 
-### Использование
+## Использование
 
-\`\`bash
+\`\`\`bash
 gendiff [options] <filepath1> <filepath2>
-\`\`
+\`\`\`
 
 ### Опции
 
@@ -31,18 +31,23 @@ gendiff [options] <filepath1> <filepath2>
 ### Примеры
 
 Сравнить два JSON файла:
-\`\`bash
+\`\`\`bash
 gendiff file1.json file2.json
-\`\`
+\`\`\`
 
-Сравнить с указанием формата:
-\`\``bash
-gendiff -f plain file1.json file2.json
-\`\`
+Сравнить два YAML файла:
+\`\`\`bash
+gendiff file1.yml file2.yml
+\`\`\`
 
-### Пример вывода
+Сравнить JSON и YAML файлы:
+\`\`\`bash
+gendiff file1.json file2.yml
+\`\`\`
 
-\`\`bash
+## Пример вывода
+
+\`\`\`bash
 {
   - follow: false
     host: hexlet.io
@@ -51,11 +56,13 @@ gendiff -f plain file1.json file2.json
   + timeout: 20
   + verbose: true
 }
-\`\`
+\`\`\`
 
-### Демонстрация
+## Демонстрация
 
 [![asciicast](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX.svg)](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX)
 
-### Демонстрация работы с YAML
 [![asciicast](https://asciinema.org/a/JbYjopU0n3NXMapKVv0SqjwXb.svg)](https://asciinema.org/a/JbYjopU0n3NXMapKVv0SqjwXb)
+
+[![asciicast](https://asciinema.org/a/3hqjvTTQa0Yuk4ifwPVEo3VG6.svg)](https://asciinema.org/a/3hqjvTTQa0Yuk4ifwPVEo3VG6)
+ 
