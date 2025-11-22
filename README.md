@@ -37,6 +37,7 @@ gendiff [options] <filepath1> <filepath2>
 
 - `stylish` (по умолчанию) - древовидный формат с отступами
 - `plain` - плоский текстовый формат
+- `json` - структурированный JSON формат для машинной обработки
 
 ### Примеры
 
@@ -55,14 +56,25 @@ gendiff file1.yml file2.yml
 gendiff file1.json file2.json --format plain
 \`\`\`
 
+Сравнить в формате json:
+\`\`\`bash
+gendiff file1.json file2.json --format json
+\`\`\`
+
 Сравнить вложенные структуры в формате plain:
 \`\`\`bash
 gendiff nested1.json nested2.json --format plain
 \`\`\`
 
+Сравнить вложенные структуры в формате json:
+\`\`\`bash
+gendiff nested1.json nested2.json --format json
+\`\`\`
+
 ## Пример вывода
 
 ### Формат stylish
+
 \`\`\`bash
 {
     common: {
@@ -111,6 +123,7 @@ gendiff nested1.json nested2.json --format plain
 \`\`\`
 
 ### Формат plain
+
 \`\`\`bash
 Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
@@ -125,6 +138,24 @@ Property 'group2' was removed
 Property 'group3' was added with value: [complex value]
 \`\`\`
 
+### Формат json
+
+\`\`\`json
+[
+  {
+    "key": "common",
+    "status": "nested",
+    "children": [
+      {
+        "key": "follow",
+        "value": false,
+        "status": "added"
+      }
+    ]
+  }
+]
+\`\`\`
+
 ## Демонстрация
 
 [![asciicast](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX.svg)](https://asciinema.org/a/tn9IURY617wrnprTIDwF9XLvX)
@@ -134,3 +165,7 @@ Property 'group3' was added with value: [complex value]
 [![asciicast](https://asciinema.org/a/3hqjvTTQa0Yuk4ifwPVEo3VG6.svg)](https://asciinema.org/a/3hqjvTTQa0Yuk4ifwPVEo3VG6)
 
 [![asciicast](https://asciinema.org/a/IJwrToPTGLLiIKaSfx0HOwQVq.svg)](https://asciinema.org/a/IJwrToPTGLLiIKaSfx0HOwQVq)
+
+[![asciicast](https://asciinema.org/a/je0d4sQ3MgniA7f4xhBKap5oL.svg)](https://asciinema.org/a/je0d4sQ3MgniA7f4xhBKap5oL)
+
+
