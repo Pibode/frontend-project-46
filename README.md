@@ -1,22 +1,22 @@
-# Gendiff - JSON и YAML Difference Generator
+## Gendiff - JSON и YAML Difference Generator
 
 CLI утилита для сравнения двух JSON или YAML файлов конфигурации и отображения различий в разных форматах.
 
-## Установка
+### Установка
 
 \`\`\`bash
-# Клонируйте репозиторий
+### Клонируйте репозиторий
 git clone https://github.com/Pibode/frontend-project-46.git
 cd frontend-project-46
 
-# Установите зависимости
+### Установите зависимости
 npm install
 
-# Сделайте пакет доступным глобально
+### Сделайте пакет доступным глобально
 npm link
 \`\`\`
 
-## Использование
+### Использование
 
 \`\`\`bash
 gendiff [options] <filepath1> <filepath2>
