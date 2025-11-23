@@ -18,4 +18,8 @@ rules:
     - single
   semi:
     - error
-    - always
+    - never
+  arrow-parens:
+    - error
+    - as-needed
+  no-trailing-spaces: error

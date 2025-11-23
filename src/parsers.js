@@ -1,25 +1,25 @@
-import { readFileSync } from 'fs';
-import path from 'path';
-import yaml from 'js-yaml';
+import { readFileSync } from 'fs'
+import path from 'path'
+import yaml from 'js-yaml'
 
-const getFileContent = (filepath) => {
-  const absolutePath = path.resolve(process.cwd(), filepath);
-  return readFileSync(absolutePath, 'utf-8');
-};
+const getFileContent = filepath => {
+  const absolutePath = path.resolve(process.cwd(), filepath)
+  return readFileSync(absolutePath, 'utf-8')
+}
 
-const parseFile = (filepath) => {
-  const content = getFileContent(filepath);
-  const extension = path.extname(filepath).toLowerCase();
+const parseFile = filepath => {
+  const content = getFileContent(filepath)
+  const extension = path.extname(filepath).toLowerCase()
 
   switch (extension) {
   case '.json':
-    return JSON.parse(content);
+    return JSON.parse(content)
   case '.yml':
   case '.yaml':
-    return yaml.load(content);
+    return yaml.load(content)
   default:
-    throw new Error(`Unsupported file format: ${extension}`);
+    throw new Error(`Unsupported file format: ${extension}`)
   }
-};
+}
 
-export { getFileContent, parseFile };
+export { getFileContent, parseFile }
