@@ -61,3 +61,4 @@ export default function genDiff(filepath1, filepath2, formatName = 'stylish') {
   const format = getFormatter(formatName)
   return format(diff)
 }
+// comment
