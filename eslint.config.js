@@ -1,4 +1,5 @@
 import js from '@eslint/js'
+import stylistic from '@stylistic/eslint-plugin'
 
 export default [
   js.configs.recommended,
@@ -13,13 +14,16 @@ export default [
         process: 'readonly',
       },
     },
+    plugins: {
+      '@stylistic': stylistic,
+    },
     rules: {
       'indent': ['error', 2],
       'linebreak-style': ['error', 'unix'],
       'quotes': ['error', 'single'],
       'semi': ['error', 'never'],
-      'arrow-parens': ['error', 'always'],
-      'comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/arrow-parens': ['error', 'as-needed'],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
       'no-trailing-spaces': 'error',
     },
   },
