@@ -13,7 +13,7 @@ const formatValue = (value) => {
 }
 
 const buildPlainLines = (diff, path = '') => {
-  const lines = diff.flatMap((item) => {
+  const lines = diff.flatMap(item => {
     const currentPath = path ? `${path}.${item.key}` : item.key
 
     switch (item.status) {
