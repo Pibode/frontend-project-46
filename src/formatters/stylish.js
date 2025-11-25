@@ -29,7 +29,7 @@ const formatStylish = (diff, depth = 1) => {
   const currentIndent = ' '.repeat(depth * indentSize - 2)
   const bracketIndent = ' '.repeat((depth - 1) * indentSize)
 
-  const lines = diff.map(item => {
+  const lines = diff.map((item) => {
     switch (item.status) {
       case 'added':
         return `${currentIndent}+ ${item.key}: ${formatValue(item.value, depth + 1)}`
