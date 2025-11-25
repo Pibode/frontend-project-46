@@ -32,7 +32,7 @@ const buildPlainLines = (diff, path = '') => {
     }
   })
 
-  return lines.filter((line) => line !== '')
+  return lines.filter(line => line !== '')
 }
 
 const formatPlain = (diff) => {
