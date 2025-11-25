@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-const formatValue = value => {
+const formatValue = (value) => {
   if (_.isObject(value) && !_.isArray(value)) {
     return '[complex value]'
   }
@@ -13,7 +13,7 @@ const formatValue = value => {
 }
 
 const buildPlainLines = (diff, path = '') => {
-  const lines = diff.flatMap(item => {
+  const lines = diff.flatMap((item) => {
     const currentPath = path ? `${path}.${item.key}` : item.key
 
     switch (item.status) {
@@ -32,10 +32,10 @@ const buildPlainLines = (diff, path = '') => {
     }
   })
 
-  return lines.filter(line => line !== '')
+  return lines.filter((line) => line !== '')
 }
 
-const formatPlain = diff => {
+const formatPlain = (diff) => {
   const lines = buildPlainLines(diff)
   return lines.join('\n')
 }

@@ -6,7 +6,7 @@ import genDiff from '../src/index.js'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const getFixturePath = filename => path.join(__dirname, '..', '__fixtures__', filename)
+const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename)
 
 describe('JSON format', () => {
   test('should format flat JSON files in json format', () => {
@@ -30,7 +30,7 @@ describe('JSON format', () => {
     const parsedResult = JSON.parse(result)
 
     expect(parsedResult).toBeInstanceOf(Array)
-    expect(parsedResult.some(item => item.status === 'nested')).toBe(true)
+    expect(parsedResult.some((item) => item.status === 'nested')).toBe(true)
   })
 
   test('should format nested YAML files in json format', () => {
@@ -41,6 +41,6 @@ describe('JSON format', () => {
     const parsedResult = JSON.parse(result)
 
     expect(parsedResult).toBeInstanceOf(Array)
-    expect(parsedResult.some(item => item.status === 'nested')).toBe(true)
+    expect(parsedResult.some((item) => item.status === 'nested')).toBe(true)
   })
 })
