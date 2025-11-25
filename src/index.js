@@ -7,7 +7,7 @@ const buildDiff = (data1, data2) => {
   const keys2 = Object.keys(data2)
   const allKeys = _.sortBy(_.union(keys1, keys2))
 
-  return allKeys.map((key) => {
+  return allKeys.map(key => {
     const value1 = data1[key]
     const value2 = data2[key]
 

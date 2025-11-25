@@ -29,23 +29,23 @@ const formatStylish = (diff, depth = 1) => {
   const currentIndent = ' '.repeat(depth * indentSize - 2)
   const bracketIndent = ' '.repeat((depth - 1) * indentSize)
 
-  const lines = diff.map((item) => {
+  const lines = diff.map(item => {
     switch (item.status) {
-    case 'added':
-      return `${currentIndent}+ ${item.key}: ${formatValue(item.value, depth + 1)}`
-    case 'deleted':
-      return `${currentIndent}- ${item.key}: ${formatValue(item.value, depth + 1)}`
-    case 'unchanged':
-      return `${currentIndent}  ${item.key}: ${formatValue(item.value, depth + 1)}`
-    case 'changed':
-      return [
-        `${currentIndent}- ${item.key}: ${formatValue(item.oldValue, depth + 1)}`,
-        `${currentIndent}+ ${item.key}: ${formatValue(item.newValue, depth + 1)}`,
-      ].join('\n')
-    case 'nested':
-      return `${currentIndent}  ${item.key}: ${formatStylish(item.children, depth + 1)}`
-    default:
-      return ''
+      case 'added':
+        return `${currentIndent}+ ${item.key}: ${formatValue(item.value, depth + 1)}`
+      case 'deleted':
+        return `${currentIndent}- ${item.key}: ${formatValue(item.value, depth + 1)}`
+      case 'unchanged':
+        return `${currentIndent}  ${item.key}: ${formatValue(item.value, depth + 1)}`
+      case 'changed':
+        return [
+          `${currentIndent}- ${item.key}: ${formatValue(item.oldValue, depth + 1)}`,
+          `${currentIndent}+ ${item.key}: ${formatValue(item.newValue, depth + 1)}`,
+        ].join('\n')
+      case 'nested':
+        return `${currentIndent}  ${item.key}: ${formatStylish(item.children, depth + 1)}`
+      default:
+        return ''
     }
   })
 
